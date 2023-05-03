@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Base class for models in the application.
 class Post < ApplicationRecord
   belongs_to :user
   has_many :comments
