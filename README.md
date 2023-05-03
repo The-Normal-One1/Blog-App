@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions!
   <!-- <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/> -->
 
-  <h2><b>OOP school library</b></h2>
+  <h2><b>Blog-App</b></h2>
 
 </div>
 
