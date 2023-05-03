@@ -1,5 +1,6 @@
-class Like < ApplicationRecord
+# frozen_string_literal: true
 
-    belongs_to :user
-    belongs_to :post
+class Like < ApplicationRecord
+  belongs_to :user
+  belongs_to :post
 end

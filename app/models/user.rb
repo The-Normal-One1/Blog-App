@@ -1,6 +1,7 @@
-class User < ApplicationRecord
+# frozen_string_literal: true
 
-    has_many :posts
-    has_many :comments
-    has_many :likes
-    end
+class User < ApplicationRecord
+  has_many :posts
+  has_many :comments
+  has_many :likes
+end
