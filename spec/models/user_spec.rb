@@ -3,6 +3,19 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   subject(:user) { User.new(name: 'Ermiyas Demsew', postsCounter: 0) }
 
+  let!(:post1) do
+    Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
+end
+let!(:post2) do
+    Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
+end
+let!(:post3) do
+    Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
+end
+let!(:post4) do
+    Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
+end
+
   before { user.save }
 
   it 'name should be present' do
@@ -29,23 +42,11 @@ RSpec.describe User, type: :model do
     expect(user).to be_valid
   end
 
-    describe 'recent_posts' do
-        let!(:user) { User.create(name: 'Ermiyas Demsew', postsCounter: 0) }
-        let!(:post1) do
-            Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
-        end
-        let!(:post2) do
-            Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
-        end
-        let!(:post3) do
-            Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
-        end
-        let!(:post4) do
-            Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
-        end
-    
-        it 'should return the most recent posts' do
-            expect(user.recent_posts).to eq([post4, post3, post2])
-        end
-    end
+  it 'should return the most recent posts' do
+    expect(user.recent_posts).to eq([post4, post3, post2])
+end
+
+it 'should increment postsCounter by 4' do
+    expect(user.postsCounter).to eq(4)
+end
 end
