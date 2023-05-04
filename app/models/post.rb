@@ -11,10 +11,10 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
-    private
+  private
 
-    # A method that updates the posts counter for a user.
-    def update_post_counter_cache
-      author.update(postsCounter: author.posts.count)
-    end
+  # A method that updates the posts counter for a user.
+  def update_post_counter_cache
+    author.update(postsCounter: author.posts.count)
+  end
 end
