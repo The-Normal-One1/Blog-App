@@ -8,4 +8,9 @@ class Post < ApplicationRecord
   def update_counter_cache
     author.update(postCounter: author.posts.count)
   end
+
+  # A method to return a recent list of comments on this post
+  def recent_comments
+    comments.order(created_at: :desc).limit(5)
+  end
 end
