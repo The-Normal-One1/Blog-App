@@ -5,16 +5,16 @@ RSpec.describe User, type: :model do
 
   let!(:post1) do
     Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
-end
-let!(:post2) do
+  end
+  let!(:post2) do
     Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
-end
-let!(:post3) do
+  end
+  let!(:post3) do
     Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
-end
-let!(:post4) do
+  end
+  let!(:post4) do
     Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
-end
+  end
 
   before { user.save }
 
@@ -44,9 +44,9 @@ end
 
   it 'should return the most recent posts' do
     expect(user.recent_posts).to eq([post4, post3, post2])
-end
+  end
 
-it 'should increment postsCounter by 4' do
+  it 'should increment postsCounter by 4' do
     expect(user.postsCounter).to eq(4)
-end
+  end
 end

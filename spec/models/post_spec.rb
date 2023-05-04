@@ -5,25 +5,25 @@ RSpec.describe Post, type: :model do
 
   let!(:post) do
     Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
-end
-let!(:comment1) do
-    Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
-end
-let!(:comment2) do
-    Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
-end
-let!(:comment3) do
-    Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
-end
-let!(:comment4) do
-    Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
-end
-let!(:comment5) do
-    Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
-end
-let!(:comment6) do
-    Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
-end
+  end
+  let!(:comment1) do
+    Comment.create(author: user, post:, text: 'This is a test for comment model using tdd')
+  end
+  let!(:comment2) do
+    Comment.create(author: user, post:, text: 'This is a test for comment model using tdd')
+  end
+  let!(:comment3) do
+    Comment.create(author: user, post:, text: 'This is a test for comment model using tdd')
+  end
+  let!(:comment4) do
+    Comment.create(author: user, post:, text: 'This is a test for comment model using tdd')
+  end
+  let!(:comment5) do
+    Comment.create(author: user, post:, text: 'This is a test for comment model using tdd')
+  end
+  let!(:comment6) do
+    Comment.create(author: user, post:, text: 'This is a test for comment model using tdd')
+  end
 
   before { post.save }
 
@@ -73,9 +73,9 @@ end
 
   it 'should return the most recent comments' do
     expect(post.recent_comments).to eq([comment6, comment5, comment4, comment3, comment2])
-end
+  end
 
-it 'should increment commentsCounter by 6' do
+  it 'should increment commentsCounter by 6' do
     expect(post.commentsCounter).to eq(6)
-end
+  end
 end
