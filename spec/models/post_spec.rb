@@ -52,4 +52,33 @@ RSpec.describe Post, type: :model do
   it 'should be valid' do
     expect(post).to be_valid
   end
+
+    describe 'recent_comments' do
+        let!(:user) { User.create(name: 'Ermiyas Demsew', postsCounter: 0) }
+        let!(:post) do
+            Post.create(author: user, title: 'This is a test for post model using tdd', commentsCounter: 0, likesCounter: 0)
+        end
+        let!(:comment1) do
+            Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
+        end
+        let!(:comment2) do
+            Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
+        end
+        let!(:comment3) do
+            Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
+        end
+        let!(:comment4) do
+            Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
+        end
+        let!(:comment5) do
+            Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
+        end
+        let!(:comment6) do
+            Comment.create(author: user, post: post, text: 'This is a test for comment model using tdd')
+        end
+            
+        it 'should return the most recent comments' do
+            expect(post.recent_comments).to eq([comment6, comment5, comment4, comment3, comment2])
+        end
+    end
 end
