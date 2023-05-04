@@ -4,6 +4,9 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'author_id'
   has_many :likes, foreign_key: 'author_id'
 
+  validates :name, presence: true
+  validates :postsCounter, presence: true, numericality: { greater_than_or_equal_to: 0, only_integer: true }
+
   # A method to return a recent list of posts by this user
   def recent_posts
     posts.order(created_at: :desc).limit(3)
