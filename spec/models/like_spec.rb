@@ -14,4 +14,8 @@ RSpec.describe Like, type: :model do
   it 'should be valid' do
     expect(like).to be_valid
   end
+
+    it 'should update the like counter cache' do
+        expect(post.likesCounter).to eq(1)
+        end
 end

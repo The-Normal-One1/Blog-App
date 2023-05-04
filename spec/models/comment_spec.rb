@@ -14,4 +14,8 @@ RSpec.describe Comment, type: :model do
   it 'should be valid' do
     expect(comment).to be_valid
   end
+
+    it 'should update the comment counter cache' do
+      expect(post.commentsCounter).to eq(1)
+    end
 end

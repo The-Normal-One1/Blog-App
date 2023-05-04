@@ -75,7 +75,7 @@ RSpec.describe Post, type: :model do
     expect(post.recent_comments).to eq([comment6, comment5, comment4, comment3, comment2])
   end
 
-  it 'should increment commentsCounter by 6' do
+  it 'update_comment_counter_cache' do
     expect(post.commentsCounter).to eq(6)
   end
 end

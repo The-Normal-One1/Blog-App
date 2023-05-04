@@ -46,7 +46,7 @@ RSpec.describe User, type: :model do
     expect(user.recent_posts).to eq([post4, post3, post2])
   end
 
-  it 'should increment postsCounter by 4' do
+  it 'update_post_counter_cache' do
     expect(user.postsCounter).to eq(4)
   end
 end
