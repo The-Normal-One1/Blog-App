@@ -18,6 +18,9 @@ gem 'puma', '~> 5.0'
 # Use dotenv to load environment variables from .env into ENV in development
 gem 'dotenv-rails', groups: %i[development test]
 
+# Use rspec for testing
+gem 'rspec-rails', '~> 5.0'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 
