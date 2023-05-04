@@ -5,6 +5,6 @@ class Comment < ApplicationRecord
 
   # A method that updates the comments counter for a post.
   def update_counter_cache
-    post.update(commentCounter: post.comments.count)
+    post.update(commentsCounter: post.comments.count)
   end
 end

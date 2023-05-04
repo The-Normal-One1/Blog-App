@@ -5,6 +5,6 @@ class Like < ApplicationRecord
 
   # A method that updates the likes counter for a post.
   def update_counter_cache
-    post.update(likeCounter: post.likes.count)
+    post.update(likesCounter: post.likes.count)
   end
 end
