@@ -6,7 +6,7 @@ class Post < ApplicationRecord
 
   # A method that updates the posts counter for a user.
   def update_counter_cache
-    author.update(postCounter: author.posts.count)
+    author.update(postsCounter: author.posts.count)
   end
 
   # A method to return a recent list of comments on this post
