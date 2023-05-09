@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   root 'users#index'
   get '/posts', to: 'posts#index'
 
-  resources :users, only:[:index, :show]  do
-    resources :posts, only:[:index, :show] do
+  resources :users, only: %i[index show] do
+    resources :posts, only: %i[index show] do
       resources :comments
     end
   end
