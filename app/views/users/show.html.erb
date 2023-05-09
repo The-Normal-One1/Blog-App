@@ -1,0 +1,16 @@
+<h1>User info</h1>
+<h3>Name: <%= @user.name %></h3>
+<h3>Bio: <%= @user.bio %></h3>
+
+<h1>Posts</h1>
+
+<ul>
+    <% @user.posts.each do |post| %>
+        <li>
+    <%= link_to post.title, user_post_path(@user, post) %>
+        </li>
+    <% end %>
+
+</ul>
+
+

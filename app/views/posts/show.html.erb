@@ -1,0 +1,11 @@
+<h1>User's post info</h1>
+
+<h3>Post title: <%= @post.title %></h3>
+<h3>Post text: <%= @post.text %></h3>
+
+<h4>Here is the Comments for a post<h4>
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li><%= comment.text %></li>
+  <% end %>
+</ul>
