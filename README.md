@@ -55,6 +55,8 @@
 - **Creating a data model**
 - **Processing data in models.**
 - **Validations and Model specs.**
+- **Setup and controllers.**
+- **Controllers specs.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,7 +88,9 @@ To run the project, navigate to the correct directory path and execute the `Ruby
 
 ### Run tests
 
-Coming soon
+To test the project, execute the following command:
+
+`rspec spec/requests`
 
 ### Deployment
 
@@ -110,8 +114,6 @@ Coming soon
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Setup and controllers.**
-- [ ] **Controllers specs.**
 - [ ] **Views.**
 - [ ] **Forms.**
 - [ ] **Integration specs for Views and fixing n+1 problems.**

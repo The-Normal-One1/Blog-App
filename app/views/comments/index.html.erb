@@ -1,0 +1,6 @@
+<h1>All Comments</h1>
+
+<ul>
+    <% @comments.each do |comment| %>
+        <li><%= comment.text %></li>
+    <% end %>
