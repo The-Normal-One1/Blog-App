@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-
   before(:each) do
-    @user = User.create(name: 'Ermiyas', photo: 'https://picsum.photos/200/300', bio: 'I am a software engineer', postsCounter: 0)
+    @user = User.create(name: 'Ermiyas', photo: 'https://picsum.photos/200/300', bio: 'I am a software engineer',
+                        postsCounter: 0)
 
     get users_path
   end
@@ -27,7 +27,6 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET /users/:id' do
-
     before(:each) { get user_path(@user) }
 
     it 'returns http success' do

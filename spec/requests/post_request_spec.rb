@@ -1,14 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  
   before(:each) do
-
-    @user = User.create(name: 'Ermiyas', photo: 'https://picsum.photos/200/300', bio: 'I am a software engineer', postsCounter: 0)
-    @post = Post.create(title: 'This is my first post!!', text: 'I like it!!', author_id: @user.id, commentsCounter: 0, likesCounter: 0)
+    @user = User.create(name: 'Ermiyas', photo: 'https://picsum.photos/200/300', bio: 'I am a software engineer',
+                        postsCounter: 0)
+    @post = Post.create(title: 'This is my first post!!', text: 'I like it!!', author_id: @user.id, commentsCounter: 0,
+                        likesCounter: 0)
 
     get user_posts_path(@user, @post)
-    end
+  end
 
   describe 'GET /posts' do
     it 'returns http success' do
@@ -29,7 +29,6 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'GET /posts/:id' do
-
     before(:each) { get user_post_path(@user, @post) }
     it 'returns http success' do
       # test for http response status
