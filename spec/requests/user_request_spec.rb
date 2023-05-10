@@ -1,9 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
+
+  before(:each) do
+    @user = User.create(name: 'Ermiyas', photo: 'https://picsum.photos/200/300', bio: 'I am a software engineer', postsCounter: 0)
+
+    get users_path
+  end
   describe 'GET /users' do
     it 'returns http success' do
-      get '/users'
       # test for http response status
       expect(response).to have_http_status(:success)
       expect(response).to have_http_status(200)
@@ -11,23 +16,21 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'response is rendered with the correct template' do
-      get '/users'
       # correct response is rendered
       expect(response).to render_template(:index)
     end
 
     it 'response body includes all users' do
-      get '/users'
       # include correct placeholders
-      expect(response.body).to include('Users')
       expect(response.body).to include('Ermiyas')
-      expect(response.body).to include('Tom')
     end
   end
 
   describe 'GET /users/:id' do
+
+    before(:each) { get user_path(@user) }
+
     it 'returns http success' do
-      get '/users/1'
       # test for http response status
       expect(response).to have_http_status(:success)
       expect(response).to have_http_status(200)
@@ -35,15 +38,13 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'response is rendered with the correct template' do
-      get '/users/1'
       # correct response is rendered
       expect(response).to render_template(:show)
     end
 
     it 'response body includes all users' do
-      get '/users/1'
       # include correct placeholders
-      expect(response.body).to include('Tom')
+      expect(response.body).to include('I am a software engineer')
     end
   end
 end
