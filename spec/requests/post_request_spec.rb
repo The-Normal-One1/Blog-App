@@ -36,7 +36,7 @@ RSpec.describe 'Posts', type: :request do
 
     it 'response is rendered with the correct template' do
       get '/users/1/posts/443'
-       # correct response is rendered
+      # correct response is rendered
       expect(response).to render_template(:show)
     end
 

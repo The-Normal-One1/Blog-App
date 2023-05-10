@@ -18,10 +18,10 @@ RSpec.describe 'Users', type: :request do
 
     it 'response body includes all users' do
       get '/users'
-   # include correct placeholders
-   expect(response.body).to include('Users')
-   expect(response.body).to include('Ermiyas')
-   expect(response.body).to include('Tom')
+      # include correct placeholders
+      expect(response.body).to include('Users')
+      expect(response.body).to include('Ermiyas')
+      expect(response.body).to include('Tom')
     end
   end
 

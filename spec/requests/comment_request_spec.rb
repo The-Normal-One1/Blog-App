@@ -23,6 +23,5 @@ RSpec.describe 'Comments', type: :request do
       expect(response.body).to include('I enjoyed watching football games!!')
       expect(response.body).to include('I like front end!!')
     end
-
   end
 end
