@@ -19,7 +19,7 @@ gem 'puma', '~> 5.0'
 gem 'dotenv-rails', groups: %i[development test]
 
 # Use rspec for testing
-gem 'rspec-rails', '~> 5.0'
+gem 'rspec-rails', groups: %i[development test]
 
 # rails-controller-testing provides integration testing between Rails controllers and RSpec
 gem 'rails-controller-testing'
