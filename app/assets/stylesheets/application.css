@@ -1,15 +1,71 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: blue;
+}
+
+.users-container,
+.comment-index,
+.post-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.users-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.user-list {
+  margin-left: 10px;
+}
+
+.postscounter {
+  margin-left: 80px;
+  margin-top: 10px;
+}
+
+.user {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.bio {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.user-posts {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.user-comments-likes {
+  margin-left: 150px;
+  margin-top: 5px;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  align-items: center;
+}
