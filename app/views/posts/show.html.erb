@@ -1,11 +1,24 @@
-<h1>User's post info</h1>
+<div class='post-info'>
+  <h1>User's post info</h1>
 
-<h3>Post title: <%= @post.title %></h3>
-<h3>Post text: <%= @post.text %></h3>
+  <div class= 'users-info'>
+    <img src="<%= @post.author.photo %>" alt="user photo" class="img">
+    <div class= user-list>
+      <h2><%= @post.author.name %></h2>
+      <p class= 'postscounter'>Number of Posts: <%= @post.author.postsCounter %></p>
+    </div>
+  </div>
 
-<h4>Here is the Comments for a post<h4>
-<ul>
-  <% @post.comments.each do |comment| %>
-    <li><%= comment.text %></li>
-  <% end %>
-</ul>
+
+    <h3 class='user-posts'> Post #<%= @post.id %> <%= @post.title %> by <%= @post.author.name%> </h3>
+  <p><%= @post.text %> </p>
+  <p class= 'user-comments-likes'>Comments: <%= @post.commentsCounter %>, Likes: <%= @post.likesCounter %></p>
+    
+
+  <h3>Here is the Comments for this post<h3>
+  <div class= 'comments'>
+    <% @post.comments.each do |comment| %>
+      <p><%= comment.author.name %>: <%= comment.text %></p>
+    <% end %>
+  </div>
+</div>
