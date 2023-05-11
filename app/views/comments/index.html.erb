@@ -1,6 +1,9 @@
+<div class='comment-index'>
 <h1>All Comments</h1>
 
-<ul>
+<div>
     <% @comments.each do |comment| %>
-        <li><%= comment.text %></li>
+        <h2><%= comment.text %></h2>
     <% end %>
+</div>
+</div>
