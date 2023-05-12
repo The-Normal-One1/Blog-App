@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  def create    
+  def create
     @post = Post.find(params[:post_id])
     @like = Like.new(author_id: current_user.id, post_id: @post.id)
 
@@ -9,6 +9,4 @@ class LikesController < ApplicationController
       render :new
     end
   end
-
-  
 end

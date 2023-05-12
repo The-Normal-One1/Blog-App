@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
   end
 
-  def new 
+  def new
     @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
     @comment = Comment.new # needed to instantiate the form_for helper in the view
@@ -24,7 +24,8 @@ class CommentsController < ApplicationController
     end
   end
 
-private
+  private
+
   def comment_params
     params.require(:comment).permit(:text, :post_id).merge(author_id: current_user.id)
   end
