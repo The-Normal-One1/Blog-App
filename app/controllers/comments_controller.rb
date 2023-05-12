@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new # needed to instantiate the form_for helper in the view
   end
 
-  def create # POST
+  def create
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
