@@ -11,19 +11,23 @@
 </div>
 </div>
 
-<div>
-    <% @posts.each do |post| %> 
-        <h2>Post #<%= post.id %> <%= link_to post.title, user_post_path(user_id: post.author.id, id: post.id) %></h2>
-        <p><%= post.text %></p>
-        </h3>
-        <p class= 'user-comments-likes'>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></p>
-<div class= 'comments'>
-  <h3>Here is the Comments for this post</h3>
+    <div>
+        <% @posts.each do |post| %> 
+                <h2>Post #<%= post.id %> <%= link_to post.title, user_post_path(user_id: post.author.id, id: post.id) %></h2>
+                <p><%= post.text %></p>
+                </h3>
+                <p class= 'user-comments-likes'>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></p>
+            <div class= 'comments'>
+                <h3>Here is the Comments for this post</h3>
 
-        <% post.recent_comments.each do |comment| %>
-        <p><%= comment.author.name %>: <%= comment.text %></p>
+                <% post.recent_comments.each do |comment| %>
+                <p><%= comment.author.name %>: <%= comment.text %></p>
+                <% end %>
+            </div>
         <% end %>
-</div>
-    <% end %>
-</div>
+       <h2> <%= link_to "New Post", new_user_post_path %></h2>
+
+        <h2><%= link_to "Back to Users", users_path %> </h2>
+                
+    </div>
 </div>

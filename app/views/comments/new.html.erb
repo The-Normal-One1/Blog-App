@@ -1,0 +1,15 @@
+<div class='post-info'>
+<h2>New comment</h2>
+
+<%= form_with model: @comment, url: user_post_comments_path(@user, @post), local: true do |form| %>
+  <div>
+  <h3>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </h3>
+  <h3>
+    <%= form.submit %>
+  </h3>
+   </div>
+<% end %>
+</div>
