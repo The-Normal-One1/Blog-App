@@ -21,4 +21,7 @@
       <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>
   </div>
+
+    <h2> <%= link_to "New Comment", new_user_post_comment_path(@user, @post) %> </h2>
+
 </div>
