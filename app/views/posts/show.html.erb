@@ -21,7 +21,11 @@
       <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>
   </div>
+  <h2> <%= link_to "New Comment", new_user_post_comment_path(@user, @post) %> </h2>
 
-    <h2> <%= link_to "New Comment", new_user_post_comment_path(@user, @post) %> </h2>
+<%= form_with model: @like, url: user_post_likes_path(@user, @post), local: true do |form| %>
+    <h2><%= form.submit "Like" %></h2>
+  <% end %>
 
+  <h2> <%= link_to "Back to Posts", user_posts_path(@user) %> </h2>
 </div>
