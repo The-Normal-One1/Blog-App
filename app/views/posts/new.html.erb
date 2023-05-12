@@ -1,15 +1,17 @@
+<div class='post-info'>
 <h1>New Post</h1>
 
 <%= form_with model: @post, url: user_posts_path(@user), local: true  do |form| %>
-        <div>
+        <h3>
         <%= form.label :title %><br>
         <%= form.text_field :title %>
-    </div>
-    <div>
+    </h3>
+    <h3>
         <%= form.label :text %><br>
         <%= form.text_area :text %>
-    </div>
-    <div>
+    </h3>
+    <h3>
         <%= form.submit %>
-    </div>
+    </h3>
 <% end %>
+</div>
