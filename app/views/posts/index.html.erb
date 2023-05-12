@@ -1,10 +1,29 @@
 <div class='post-index'>
 <h1>All posts</h1>
 
+<div class= 'users-info'>
+
+<img src="<%= @posts.first.author.photo %>" alt="user photo" class="img">
+
+<div class= user-list>
+<h2><%= @posts.first.author.name %></h2>
+<p class= 'postscounter'>Number of Posts: <%= @posts.first.author.postsCounter %></p>
+</div>
+</div>
+
 <div>
     <% @posts.each do |post| %> 
-        <h2><%= link_to post.title, user_post_path(user_id: post.author.id, id: post.id) %></h2>
+        <h2>Post #<%= post.id %> <%= link_to post.title, user_post_path(user_id: post.author.id, id: post.id) %></h2>
         <p><%= post.text %></p>
+        </h3>
+        <p class= 'user-comments-likes'>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></p>
+<div class= 'comments'>
+  <h3>Here is the Comments for this post</h3>
+
+        <% post.recent_comments.each do |comment| %>
+        <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% end %>
+</div>
     <% end %>
 </div>
 </div>
