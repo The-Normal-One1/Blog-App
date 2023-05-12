@@ -14,7 +14,7 @@
 <h1><%= link_to 'Posts', user_posts_path(@user) %></h1>
 
 <div>
-    <% @user.posts.each do |post| %>
+    <% @user.recent_posts.each do |post| %>
         <h3 class='user-posts'> Post #<%= post.id %> <%= link_to post.title, user_post_path(@user, post) %>
         </h3>
         <p><%= post.text %> </p>
