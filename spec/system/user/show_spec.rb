@@ -40,5 +40,25 @@ RSpec.describe 'Users', type: :system do
             end
         
         end
+
+        it "displays the button that lets me view all of a user's posts" do
+            # correct links are displayed
+            expect(page).to have_selector(:link_or_button, 'Posts')
+        end      
+
+        it "displays me to that post's show page when I click user's post" do
+            # correct links are displayed
+            expect(page).to have_link(@post.title, href: user_post_path(@user, @post))
+        end
+
+          it "displays all of a user's posts" do
+            # correct links are displayed
+            expect(page).to have_link('Posts', href: user_posts_path(@user))
+        end
+
+        it 'displays the correct links' do
+            # correct links are displayed
+            expect(page).to have_link('New Post', href: new_user_post_path(@user))
+        end
     end
 end
