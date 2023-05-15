@@ -43,7 +43,11 @@ RSpec.describe 'Posts', type: :system do
             # some of the post's text
             expect(page).to have_content(@comment.text)
         end
-        
+
+        it "displays pagination content" do
+            # some of the post's text
+            expect(page).to have_content('Pagination')
+        end
     end
 
 end
