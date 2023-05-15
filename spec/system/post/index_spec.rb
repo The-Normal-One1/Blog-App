@@ -18,6 +18,12 @@ RSpec.describe 'Posts', type: :system do
         # user image is displayed
         expect(page).to have_css("img[src*='https://picsum.photos/200/300']")
         end
+  
+        it 'displays the correct content' do
+        # correct content is displayed
+        expect(page).to have_content(@user.name)
+        end
+    
     end
 
 end
