@@ -39,6 +39,11 @@ RSpec.describe 'Posts', type: :system do
             expect(page).to have_content(@post.text)
         end
 
+        it "displays username of the comment's author" do
+            # post text is displayed
+            expect(page).to have_content(@comment.author.name)
+        end
+
     end
 
 
