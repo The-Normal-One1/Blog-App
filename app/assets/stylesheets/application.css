@@ -70,3 +70,8 @@ h1 {
   margin-left: 20px;
   align-items: center;
 }
+
+.btn {
+  font-size: 30px;
+  border-color: black;
+}
