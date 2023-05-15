@@ -24,6 +24,11 @@ RSpec.describe 'Posts', type: :system do
             expect(page).to have_content(@post.author.name)
         end
 
+        it "displays how many comments the post has" do
+            # post title is displayed
+            expect(page).to have_content(@post.commentsCounter)
+        end
+
     end
 
 
