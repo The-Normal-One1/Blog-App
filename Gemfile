@@ -21,6 +21,12 @@ gem 'dotenv-rails', groups: %i[development test]
 # Use rspec for testing
 gem 'rspec-rails', groups: %i[development test]
 
+# Use Capybara for system testing
+gem 'capybara', groups: %i[development test]
+
+# webdrivers makes it easy to download and run Selenium & ChromeDriver
+gem 'webdrivers', groups: %i[development test]
+
 # rails-controller-testing provides integration testing between Rails controllers and RSpec
 gem 'rails-controller-testing'
 
