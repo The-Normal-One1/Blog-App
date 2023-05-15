@@ -33,7 +33,11 @@ RSpec.describe 'Posts', type: :system do
         # post title is displayed
         expect(page).to have_content(@post.title)
         end
-    
+
+        it "display some of the post's text" do
+            # some of the post's text
+            expect(page).to have_content(@post.text)
+        end
     end
 
 end
