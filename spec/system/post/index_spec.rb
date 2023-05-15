@@ -28,6 +28,11 @@ RSpec.describe 'Posts', type: :system do
         # correct content is displayed
         expect(page).to have_content(@user.postsCounter)
         end
+
+        it "displays post's title" do
+        # post title is displayed
+        expect(page).to have_content(@post.title)
+        end
     
     end
 
