@@ -23,6 +23,11 @@ RSpec.describe 'Posts', type: :system do
         # correct content is displayed
         expect(page).to have_content(@user.name)
         end
+
+        it 'displays number of posts user has written' do
+        # correct content is displayed
+        expect(page).to have_content(@user.postsCounter)
+        end
     
     end
 
