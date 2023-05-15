@@ -34,6 +34,11 @@ RSpec.describe 'Posts', type: :system do
             expect(page).to have_content(@post.likesCounter)
         end
 
+        it "displays the post's text" do
+            # post text is displayed
+            expect(page).to have_content(@post.text)
+        end
+
     end
 
 
