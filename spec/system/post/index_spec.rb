@@ -38,6 +38,12 @@ RSpec.describe 'Posts', type: :system do
             # some of the post's text
             expect(page).to have_content(@post.text)
         end
+
+        it "displays the first comments on a post" do
+            # some of the post's text
+            expect(page).to have_content(@comment.text)
+        end
+        
     end
 
 end
