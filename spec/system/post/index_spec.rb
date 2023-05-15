@@ -48,6 +48,11 @@ RSpec.describe 'Posts', type: :system do
             # some of the post's text
             expect(page).to have_content('Pagination')
         end
+
+        it "displays a link to post's show page" do
+            # some of the post's text
+            expect(page).to have_link(@post.title, href: user_post_path(user_id: @post.author.id, id: @post.id))
+        end
     end
 
 end
