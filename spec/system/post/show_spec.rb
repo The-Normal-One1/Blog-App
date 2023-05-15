@@ -29,6 +29,11 @@ RSpec.describe 'Posts', type: :system do
             expect(page).to have_content(@post.commentsCounter)
         end
 
+        it "displays how many likes the post has" do
+            # post title is displayed
+            expect(page).to have_content(@post.likesCounter)
+        end
+
     end
 
 
