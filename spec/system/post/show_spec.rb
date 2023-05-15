@@ -19,6 +19,11 @@ RSpec.describe 'Posts', type: :system do
             expect(page).to have_content(@post.title)
         end
 
+        it "displays how wrote the post" do
+            # post title is displayed
+            expect(page).to have_content(@post.author.name)
+        end
+
     end
 
 
