@@ -44,6 +44,11 @@ RSpec.describe 'Posts', type: :system do
             expect(page).to have_content(@comment.author.name)
         end
 
+        it "displays the comment's text" do
+            # post text is displayed
+            expect(page).to have_content(@comment.text)
+        end
+
     end
 
 
