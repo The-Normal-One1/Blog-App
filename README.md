@@ -114,6 +114,12 @@ Coming soon
 - Twitter: [@dprotocoll](https://twitter.com/dprotocoll)
 - LinkedIn: [@mrprotocoll](https://www.linkedin.com/in/mrprotocoll)
 
+👤 **John Kpordje**
+
+- GitHub: [@Outkarm](https://github.com/Outkarm)
+- Twitter: [@outkarm](https://twitter.com/outkarm)
+- LinkedIn: [John Kpordje](https://www.linkedin.com/in/john-kpordje-866749241/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
