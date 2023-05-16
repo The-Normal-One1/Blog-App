@@ -18,7 +18,7 @@
                 </h3>
                 <p class= 'user-comments-likes'>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></p>
             <div class= 'comments'>
-                <h3>Here is the Comments for this post</h3>
+                <h3>Here are the Comments for this post</h3>
 
                 <% post.recent_comments.each do |comment| %>
                 <p><%= comment.author.name %>: <%= comment.text %></p>
