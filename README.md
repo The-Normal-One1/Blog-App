@@ -73,6 +73,9 @@ In order to run this project you need:
 - Code Editor (VS Studio)
 - Ruby
 - Ruby on Rails
+- Views
+- Forms
+- Integration specs for Views and fixing n+1 problems.
 
 ### Setup
 
@@ -126,9 +129,6 @@ Coming soon
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Views.**
-- [ ] **Forms.**
-- [ ] **Integration specs for Views and fixing n+1 problems.**
 - [ ] **Add Devise.**
 - [ ] **Add authorization rules.**
 - [ ] **Add API endpoints.**
