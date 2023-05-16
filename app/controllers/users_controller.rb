@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.includes(posts: [:comments, :author]).all
+    @users = User.includes(posts: %i[comments author]).all
   end
 
   def show
