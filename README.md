@@ -73,6 +73,9 @@ In order to run this project you need:
 - Code Editor (VS Studio)
 - Ruby
 - Ruby on Rails
+- Views
+- Forms
+- Integration specs for Views and fixing n+1 problems.
 
 ### Setup
 
@@ -108,15 +111,24 @@ Coming soon
 - Twitter: [@DemsewErmiyas](https://twitter.com/DemsewErmiyas)
 - LinkedIn: [@Ermiyas Demsew](https://www.linkedin.com/in/ermiyas-demsew-616b1b19a/)
 
+👤 **mrprotocoll**
+
+- GitHub: [@mrprotocoll](https://github.com/mrprotocoll)
+- Twitter: [@dprotocoll](https://twitter.com/dprotocoll)
+- LinkedIn: [@mrprotocoll](https://www.linkedin.com/in/mrprotocoll)
+
+👤 **John Kpordje**
+
+- GitHub: [@Outkarm](https://github.com/Outkarm)
+- Twitter: [@outkarm](https://twitter.com/outkarm)
+- LinkedIn: [John Kpordje](https://www.linkedin.com/in/john-kpordje-866749241/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Views.**
-- [ ] **Forms.**
-- [ ] **Integration specs for Views and fixing n+1 problems.**
 - [ ] **Add Devise.**
 - [ ] **Add authorization rules.**
 - [ ] **Add API endpoints.**

@@ -3,7 +3,7 @@
 
 <div class= 'users-info'>
 
-<img src="<%= @posts.first.author.photo %>" alt="user photo" class="img">
+<img src="<%= @user.photo %>" alt="user photo" class="img">
 
 <div class= user-list>
 <h2><%= @posts.first.author.name %></h2>
@@ -18,13 +18,14 @@
                 </h3>
                 <p class= 'user-comments-likes'>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></p>
             <div class= 'comments'>
-                <h3>Here is the Comments for this post</h3>
+                <h3>Here are the Comments for this post</h3>
 
                 <% post.recent_comments.each do |comment| %>
                 <p><%= comment.author.name %>: <%= comment.text %></p>
                 <% end %>
             </div>
-        <% end %>
+        <% end %> <br>
+        <h2>Pagination</h2><br>
        <h2> <%= link_to "New Post", new_user_post_path %></h2>
 
         <h2><%= link_to "Back to Users", users_path %> </h2>
