@@ -14,21 +14,6 @@ RSpec.describe 'Posts', type: :system do
         visit user_posts_path(@user)
         end
 
-        it 'displays user image' do
-        # user image is displayed
-        expect(page).to have_css("img[src*='https://picsum.photos/200/300']")
-        end
-  
-        it 'displays the correct content' do
-        # correct content is displayed
-        expect(page).to have_content(@user.name)
-        end
-
-        it 'displays number of posts user has written' do
-        # correct content is displayed
-        expect(page).to have_content(@user.postsCounter)
-        end
-
         it "displays post's title" do
         # post title is displayed
         expect(page).to have_content(@post.title)
@@ -52,6 +37,21 @@ RSpec.describe 'Posts', type: :system do
         it "displays a link to post's show page" do
             # some of the post's text
             expect(page).to have_link(@post.title, href: user_post_path(user_id: @post.author.id, id: @post.id))
+        end
+
+        it 'displays user image' do
+            # user image is displayed
+            expect(page).to have_css("img[src*='https://picsum.photos/200/300']")
+        end
+    
+        it 'displays the correct content' do
+            # correct content is displayed
+            expect(page).to have_content(@user.name)
+        end
+
+        it 'displays number of posts user has written' do
+            # correct content is displayed
+            expect(page).to have_content(@user.postsCounter)
         end
     end
 
