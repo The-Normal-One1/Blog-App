@@ -34,7 +34,6 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_content(@user.postsCounter)
     end
 
-
     it 'displays the correct links' do
       # When I click on a user, I am redirected to that user's show page.
       expect(page).to have_link(@user.name, href: user_path(@user))
