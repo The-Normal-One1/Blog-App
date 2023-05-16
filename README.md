@@ -108,6 +108,12 @@ Coming soon
 - Twitter: [@DemsewErmiyas](https://twitter.com/DemsewErmiyas)
 - LinkedIn: [@Ermiyas Demsew](https://www.linkedin.com/in/ermiyas-demsew-616b1b19a/)
 
+👤 **mrprotocoll**
+
+- GitHub: [@mrprotocoll](https://github.com/mrprotocoll)
+- Twitter: [@dprotocoll](https://twitter.com/dprotocoll)
+- LinkedIn: [@mrprotocoll](https://www.linkedin.com/in/mrprotocoll)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
