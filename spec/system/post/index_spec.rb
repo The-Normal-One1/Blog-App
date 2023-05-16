@@ -7,8 +7,8 @@ RSpec.describe 'Posts', type: :system do
     before(:each) do
       @user = User.create(name: 'Ermiyas', photo: 'https://picsum.photos/200/300', bio: 'I am a software engineer',
                           postsCounter: 0)
-      @post = Post.create(title: 'This is my first post!!', text: 'I like it!!', author_id: @user.id, commentsCounter: 0,
-                          likesCounter: 0)
+      @post = Post.create(title: 'This is my first post!!', text: 'I like it!!', author_id: @user.id,
+                          commentsCounter: 0, likesCounter: 0)
       @comment = Comment.create(text: 'I enjoy watching football games!!', author_id: @user.id, post_id: @post.id)
       visit user_posts_path(@user)
     end
