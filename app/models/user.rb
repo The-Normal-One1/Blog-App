@@ -13,7 +13,7 @@ class User < ApplicationRecord
                            allow_nil: true
 
   # Role-based authorization
-  Roles = %i[admin default].freeze
+  ROLES = %i[admin default].freeze
 
   def is?(requested_role)
     role == requested_role.to_s
