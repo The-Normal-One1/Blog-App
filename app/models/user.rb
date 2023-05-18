@@ -9,7 +9,8 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: 'author_id'
 
   validates :name, presence: true
-  validates :postsCounter, presence: true, numericality: { greater_than_or_equal_to: 0, only_integer: true }, allow_nil: true
+  validates :postsCounter, presence: true, numericality: { greater_than_or_equal_to: 0, only_integer: true },
+                           allow_nil: true
 
   # A method to return a recent list of posts by this user
   def recent_posts
