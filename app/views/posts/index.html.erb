@@ -25,7 +25,7 @@
                 <% end %>
             </div>
             <% if can? :destroy, post %>
-             <%= link_to "Delete Post", user_post_path(post.author.id, post.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+                <%= link_to "Delete Post", user_post_path(post.author.id, post.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn" %>
             <% end %>
         <% end %> <br>
         <h2>Pagination</h2><br>

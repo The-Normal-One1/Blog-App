@@ -57,6 +57,8 @@
 - **Validations and Model specs.**
 - **Setup and controllers.**
 - **Controllers specs.**
+- **Add Devise.**
+- **Add authorization rules.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,8 +131,6 @@ Coming soon
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add Devise.**
-- [ ] **Add authorization rules.**
 - [ ] **Add API endpoints.**
 - [ ] **Exercise: API documentation.**
 
