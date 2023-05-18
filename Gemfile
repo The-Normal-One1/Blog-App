@@ -45,7 +45,7 @@ gem 'jbuilder'
 # Add devise for user authentication
 gem 'devise'
 
-# authorization library for Rails 
+# authorization library for Rails
 gem 'cancancan'
 
 # Use Redis adapter to run Action Cable in production

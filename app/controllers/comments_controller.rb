@@ -23,13 +23,13 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy 
+  def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    flash[:success] = "Comment deleted successfully"
+    flash[:success] = 'Comment deleted successfully'
     redirect_to user_post_path(current_user.id, @comment.post_id)
   end
-  
+
   private
 
   def comment_params
