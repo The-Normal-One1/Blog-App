@@ -12,6 +12,13 @@ class User < ApplicationRecord
   validates :postsCounter, presence: true, numericality: { greater_than_or_equal_to: 0, only_integer: true },
                            allow_nil: true
 
+  # Role-based authorization
+  ROLES = %i[admin default].freeze
+
+  def is?(requested_role)
+    role == requested_role.to_s
+  end
+
   # A method to return a recent list of posts by this user
   def recent_posts
     posts.order(created_at: :desc).limit(3)

@@ -24,6 +24,9 @@
                 <p><%= comment.author.name %>: <%= comment.text %></p>
                 <% end %>
             </div>
+            <% if can? :destroy, post %>
+                <%= link_to "Delete Post", user_post_path(post.author.id, post.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn" %>
+            <% end %>
         <% end %> <br>
         <h2>Pagination</h2><br>
        <h2> <%= link_to "New Post", new_user_post_path %></h2>

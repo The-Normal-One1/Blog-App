@@ -4,6 +4,7 @@ class Comment < ApplicationRecord
   belongs_to :post
 
   after_save :update_comment_counter_cache
+  after_destroy :update_comment_counter_cache
 
   private
 
