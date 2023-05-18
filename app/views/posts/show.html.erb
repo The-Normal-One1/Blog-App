@@ -19,9 +19,9 @@
   <div class= 'comments'>
     <% @post.recent_comments.each do |comment| %>
       <p><%= comment.author.name %>: <%= comment.text %></p>
-      <% if can? :destroy, comment %>
+    <div class='delete-comments' > <% if can? :destroy, comment %>
         <%= link_to "Delete Comment", user_post_comment_path(@post.author.id, @post.id, comment.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
-      <% end %>
+      <% end %></div> 
     <% end %>
   </div>
   <h2> <%= link_to "New Comment", new_user_post_comment_path(@user, @post) %> </h2>
