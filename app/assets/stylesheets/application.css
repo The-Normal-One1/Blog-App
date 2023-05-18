@@ -11,7 +11,8 @@ h1 {
 
 .users-container,
 .comment-index,
-.post-index {
+.post-index,
+.devise-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,4 +75,20 @@ h1 {
 .btn {
   font-size: 30px;
   border-color: black;
+}
+
+.devise-edit,
+.devise-new {
+  padding: 10px;
+  margin-left: 120px;
+  font-size: 22px;
+}
+
+.field {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.actions {
+  font-size: 25px;
 }
