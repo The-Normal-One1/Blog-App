@@ -64,6 +64,9 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # debug exceptions response format
+  config.debug_exception_response_format = :api
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
