@@ -1,15 +1,14 @@
 class Api::V1::UsersController < ApplicationController
   # GET /api/v1/users
   def index
-    @users = User.includes(posts: %i[comments author]).all
-    # .select(:id, :name,:photo, :email, :bio, :postsCounter)
+    @users = User.includes(posts: %i[comments author]).all.select(:id, :name,:photo, :email, :bio, :postsCounter)
+    
     render json: @users
   end
 
   # GET /api/v1/users/:id
   def show
-    @user = User.find(params[:id])
-    # .select(:id, :name,:photo, :email, :bio, :postsCounter)
+    @user = User.select(:id, :name,:photo, :email, :bio, :postsCounter).find(params[:id])
     render json: @user
   end
 
